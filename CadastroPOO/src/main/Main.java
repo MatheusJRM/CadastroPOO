@@ -386,9 +386,59 @@ public class Main {
         } catch (IOException e) {
             System.out.println("Erro ao recuperar os dados: " + e.getMessage());
         } catch (ClassNotFoundException e) {
-            System.out.println("Erro ao carregar os dados: Classe não encontrada.");
+            System.out.println("Erro ao carregar os dados: Classe nao encontrada.");
         } catch (Exception e) {
             System.out.println("Erro inesperado ao recuperar os dados: " + e.getMessage());
         }
     }
 }
+//
+//    public static void main(String[] args) {
+//        PessoaFisicaRepo repo1 = new PessoaFisicaRepo();
+//
+//        PessoaFisica pessoa1 = new PessoaFisica(1, "Matheus Jose", "12345678900", 30);
+//        PessoaFisica pessoa2 = new PessoaFisica(2, "Isabela Arruda", "98765432100", 25);
+//        repo1.inserir(pessoa1);
+//        repo1.inserir(pessoa2);
+//
+//        try {
+//            System.out.println("Dados de Pessoa Fisica Armazenados.");
+//            repo1.persistir("pessoas_fisicas.dat");
+//        } catch (IOException e) {
+//            System.out.println("Erro ao salvar os dados: " + e.getMessage());
+//        }
+//
+//        PessoaFisicaRepo repo2 = new PessoaFisicaRepo();
+//
+//        try {
+//            System.out.println("Dados de Pessoa Fisica Recuperados.");
+//            repo2.recuperar("pessoas_fisicas.dat");
+//            repo2.obterTodos().forEach(pessoa -> System.out.println(pessoa.exibir()));
+//        } catch (IOException | ClassNotFoundException e) {
+//            System.out.println("Erro inesperado ao recuperar os dados: " + e.getMessage());
+//        }
+//
+//        PessoaJuridicaRepo repo3 = new PessoaJuridicaRepo();
+//
+//        PessoaJuridica empresa1 = new PessoaJuridica(3, "Empresa ABC", "11111111000111");
+//        PessoaJuridica empresa2 = new PessoaJuridica(4, "Empresa XYZ", "22222222000122");
+//        repo3.inserir(empresa1);
+//        repo3.inserir(empresa2);
+//
+//        try {
+//            System.out.println("\nDados de Pessoa Juridica Armazenados.");
+//            repo3.persistir("pessoas_juridicas.dat");
+//        } catch (IOException e) {
+//            System.out.println("Erro ao salvar os dados: " + e.getMessage());
+//        }
+//
+//        PessoaJuridicaRepo repo4 = new PessoaJuridicaRepo();
+//
+//        try {
+//            System.out.println("Dados de Pessoa Juridica Recuperados.");
+//            repo4.recuperar("pessoas_juridicas.dat");
+//            repo4.obterTodos().forEach(pessoa -> System.out.println(pessoa.exibir()));
+//        } catch (IOException | ClassNotFoundException e) {
+//            System.out.println("Erro inesperado ao recuperar os dados: " + e.getMessage());
+//        }
+//    }
